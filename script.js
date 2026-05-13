@@ -25,7 +25,7 @@ const products = [
         name: "OVERSIZED DESK MAT", 
         price: 45, 
         category: "acc", 
-        img: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?q=80&w=800" 
+        img: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=800" 
     }
 ];
 
