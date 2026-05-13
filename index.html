@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaTech | E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">NovaTech</div>
+            <div class="cart-status">Cart (<span id="cart-count">0</span>)</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Upgrade Your Setup</h1>
+            <p>Premium peripherals for the modern creator.</p>
+        </section>
+
+        <section class="products">
+            <div class="filter-buttons">
+                <button onclick="filterItems('all')">All</button>
+                <button onclick="filterItems('keyboard')">Keyboards</button>
+                <button onclick="filterItems('mouse')">Mice</button>
+            </div>
+
+            <div id="product-grid" class="grid">
+                <!-- Products injected by JS -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
