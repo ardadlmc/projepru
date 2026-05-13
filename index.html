@@ -3,34 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaTech | E-Commerce</title>
+    <title>NovaTech | Premium Peripherals</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Adding Google Fonts for a better look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">NovaTech</div>
-            <div class="cart-status">Cart (<span id="cart-count">0</span>)</div>
+        <nav class="navbar">
+            <div class="logo">Nova<span>Tech</span></div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="filterItems('all')">Shop All</a></li>
+                <li><a href="#" onclick="filterItems('keyboard')">Keyboards</a></li>
+                <li><a href="#" onclick="filterItems('mouse')">Mice</a></li>
+            </ul>
+            <div class="cart-container">
+                <button id="cart-btn">🛒 Cart (<span id="cart-count">0</span>)</button>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>Upgrade Your Setup</h1>
-            <p>Premium peripherals for the modern creator.</p>
-        </section>
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1>Engineered for Performance</h1>
+            <p>Elevate your workflow with our curated collection of mechanical tools.</p>
+            <button class="cta-btn" onclick="document.getElementById('product-grid').scrollIntoView()">Explore Shop</button>
+        </div>
+    </section>
 
-        <section class="products">
-            <div class="filter-buttons">
-                <button onclick="filterItems('all')">All</button>
-                <button onclick="filterItems('keyboard')">Keyboards</button>
-                <button onclick="filterItems('mouse')">Mice</button>
-            </div>
-
-            <div id="product-grid" class="grid">
-                <!-- Products injected by JS -->
-            </div>
-        </section>
+    <main class="container">
+        <div id="product-grid" class="product-grid">
+            <!-- Products injected by JavaScript -->
+        </div>
     </main>
 
     <script src="script.js"></script>
