@@ -25,21 +25,20 @@ const products = [
         name: "OVERSIZED DESK MAT", 
         price: 45, 
         category: "acc", 
-        img: "https://images.unsplash.com/photo-1631553127988-348270119e7a?q=80&w=800" 
+        img: "https://images.unsplash.com/photo-1616412411311-5943a5aa9384?q=80&w=800" 
     }
 ];
 
 let cart = [];
 
-// Navigation switching logic
+// Navigation switching
 function showPage(pageId) {
-    const pages = document.querySelectorAll('.page');
-    pages.forEach(p => p.style.display = 'none');
+    document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
     document.getElementById(pageId + '-page').style.display = 'block';
     window.scrollTo(0, 0);
 }
 
-// Rendering products to the grid
+// Display products
 function renderProducts(items) {
     const grid = document.getElementById('product-grid');
     if (!grid) return;
@@ -56,7 +55,7 @@ function renderProducts(items) {
     `).join('');
 }
 
-// Cart functionality
+// Cart logic
 function addToCart(id) {
     const item = products.find(p => p.id === id);
     cart.push(item);
@@ -82,14 +81,11 @@ function updateCartUI() {
 
 function toggleCart(forceOpen = false) {
     const sidebar = document.getElementById('cart-sidebar');
-    if (forceOpen) {
-        sidebar.classList.add('active');
-    } else {
-        sidebar.classList.toggle('active');
-    }
+    if (forceOpen) sidebar.classList.add('active');
+    else sidebar.classList.toggle('active');
 }
 
-// Checkout command
+// Checkout and reset
 function processCheckout() {
     if (cart.length === 0) {
         alert("Your cart is empty.");
@@ -99,14 +95,13 @@ function processCheckout() {
     const finalTotal = document.getElementById('cart-total').innerText;
     alert("ORDER CONFIRMED.\nTOTAL: " + finalTotal + " USD\nThank you for shopping with NovaTech.");
     
-    // Reset system after checkout
     cart = [];
     updateCartUI();
     toggleCart();
     showPage('home');
 }
 
-// Filters
+// Category filter
 function filterItems(category) {
     if (category === 'all') {
         renderProducts(products);
@@ -116,5 +111,5 @@ function filterItems(category) {
     }
 }
 
-// Initial page load
+// Start on load
 renderProducts(products);
