@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <!-- NAV BAR -->
+    <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="menu-left">
             <a href="#" onclick="showPage('home')">HOME</a>
@@ -21,7 +21,7 @@
         </div>
     </nav>
 
-    <!-- PAGE: HOME -->
+    <!-- SECTION: HOME -->
     <section id="home-page" class="page">
         <div class="hero-full">
             <div class="hero-text">
@@ -31,25 +31,25 @@
         </div>
     </section>
 
-    <!-- PAGE: PRODUCTS -->
+    <!-- SECTION: PRODUCTS -->
     <section id="products-page" class="page" style="display:none;">
         <div class="filter-bar">
             <span onclick="filterItems('all')">VIEW ALL</span>
             <span onclick="filterItems('keyboard')">KEYBOARDS</span>
             <span onclick="filterItems('mouse')">MICE</span>
         </div>
-        <div id="product-grid" class="product-grid">
-            <!-- JS Injection -->
-        </div>
+        <div id="product-grid" class="product-grid"></div>
     </section>
 
-    <!-- PAGE: CONTACT -->
+    <!-- SECTION: CONTACT -->
     <section id="contact-page" class="page" style="display:none;">
         <div class="contact-wrapper">
             <h2>CONTACT US</h2>
-            <p>ARDA DILMAÇ</p>
-            <p>PIRI REIS UNIVERSITY</p>
-            <a href="mailto:arda.dilmac@pirireis.edu.tr">arda.dilmac@pirireis.edu.tr</a>
+            <div class="dev-info">
+                <p><strong>Arda Dilmaç</strong></p>
+                <p>Piri Reis University Student</p>
+                <a href="mailto:arda.dilmac@pirireis.edu.tr">arda.dilmac@pirireis.edu.tr</a>
+            </div>
             
             <form class="contact-form">
                 <input type="text" placeholder="NAME">
@@ -66,12 +66,10 @@
             <h3>CART</h3>
             <span class="close-cart" onclick="toggleCart()">CLOSE</span>
         </div>
-        <div id="cart-items">
-            <!-- Cart items here -->
-        </div>
+        <div id="cart-items"></div>
         <div class="cart-footer">
             <p>TOTAL: $<span id="cart-total">0.00</span></p>
-            <button class="checkout-btn">PROCEED TO CHECKOUT</button>
+            <button class="checkout-btn" onclick="processCheckout()">PROCEED TO CHECKOUT</button>
         </div>
     </div>
 
