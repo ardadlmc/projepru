@@ -1,42 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaTech | Premium Peripherals</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Adding Google Fonts for a better look -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">Nova<span>Tech</span></div>
-            <ul class="nav-links">
-                <li><a href="#" onclick="filterItems('all')">Shop All</a></li>
-                <li><a href="#" onclick="filterItems('keyboard')">Keyboards</a></li>
-                <li><a href="#" onclick="filterItems('mouse')">Mice</a></li>
-            </ul>
-            <div class="cart-container">
-                <button id="cart-btn">🛒 Cart (<span id="cart-count">0</span>)</button>
-            </div>
-        </nav>
-    </header>
+<!-- ... existing sections ... -->
 
-    <section class="hero-banner">
-        <div class="hero-content">
-            <h1>Engineered for Performance</h1>
-            <p>Elevate your workflow with our curated collection of mechanical tools.</p>
-            <button class="cta-btn" onclick="document.getElementById('product-grid').scrollIntoView()">Explore Shop</button>
+    <section id="about-me" class="about-section container">
+        <div class="about-card">
+            <h2>About the Developer</h2>
+            <div class="about-content">
+                <div class="profile-info">
+                    <h3>Arda Dilmaç</h3>
+                    <p>Student at <strong>Piri Reis University</strong></p>
+                    <a href="mailto:arda.dilmac@pirireis.edu.tr" class="email-link">arda.dilmac@pirireis.edu.tr</a>
+                </div>
+            </div>
         </div>
     </section>
+</main>
 
-    <main class="container">
-        <div id="product-grid" class="product-grid">
-            <!-- Products injected by JavaScript -->
-        </div>
-    </main>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<footer>
+    <p>&copy; 2026 NovaTech Project | Arda Dilmaç | Piri Reis University</p>
+</footer>
