@@ -1,19 +1,59 @@
-<!-- ... existing sections ... -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaTech | Arda Dilmaç Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Nova<span>Tech</span></div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="filterItems('all')">Shop All</a></li>
+                <li><a href="#" onclick="filterItems('keyboard')">Keyboards</a></li>
+                <li><a href="#" onclick="filterItems('mouse')">Mice</a></li>
+                <li><a href="#about-me">About Me</a></li>
+            </ul>
+            <div class="cart-container">
+                <button id="cart-btn">🛒 Cart (<span id="cart-count">0</span>)</button>
+            </div>
+        </nav>
+    </header>
 
-    <section id="about-me" class="about-section container">
-        <div class="about-card">
-            <h2>About the Developer</h2>
-            <div class="about-content">
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1>Engineered for Performance</h1>
+            <p>Premium peripherals curated for students and professionals.</p>
+            <button class="cta-btn" onclick="document.getElementById('product-grid').scrollIntoView({behavior: 'smooth'})">Explore Shop</button>
+        </div>
+    </section>
+
+    <main class="container">
+        <div id="product-grid" class="product-grid">
+            <!-- Products injected by JavaScript -->
+        </div>
+
+        <hr class="section-divider">
+
+        <section id="about-me" class="about-section">
+            <div class="about-card">
+                <h2>Developer Profile</h2>
                 <div class="profile-info">
                     <h3>Arda Dilmaç</h3>
-                    <p>Student at <strong>Piri Reis University</strong></p>
+                    <p class="uni-tag">Piri Reis University Student</p>
                     <a href="mailto:arda.dilmac@pirireis.edu.tr" class="email-link">arda.dilmac@pirireis.edu.tr</a>
                 </div>
             </div>
-        </div>
-    </section>
-</main>
+        </section>
+    </main>
 
-<footer>
-    <p>&copy; 2026 NovaTech Project | Arda Dilmaç | Piri Reis University</p>
-</footer>
+    <footer>
+        <p>&copy; 2026 NovaTech | Designed by Arda Dilmaç | Piri Reis University</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
